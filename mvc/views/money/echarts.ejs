@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>统计图</title>
+    <script src="/js/ajax.js"></script>
+    <script src="/echarts/dist/echarts.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../static/admin/layui/css/layui.css" />
+    <link rel="stylesheet" type="text/css" href="../../static/admin/css/admin.css" />
+    <link rel="stylesheet" href="/time/css/dateTime.css">
+    <link rel="stylesheet" href="/money/echarts/css/echarts.css">
+</head>
+
+<body>
+    <a href="/money/money" class="layui-btn layui-btn-normal">返回</a>
+    <div class="box">
+        <form class="layui-form" action="">
+            <div class="left">
+                <div class="layui-inline">
+                    <input class="layui-input" autocomplete="off" name="starttime" type="text" placeholder="请选择起始日期"
+                        id="date" value="">
+                </div>
+                <div class="layui-inline">
+                    <input class="layui-input" autocomplete="off" name="endtime" type="text" placeholder="请选择截至日期"
+                        id="date2" value="">
+                </div>
+                <button class="layui-btn layui-btn-normal" lay-filter="search" lay-submit="search">搜索</button>
+            </div>
+
+            <div class="layui-inline right">
+                <div class="layui-input-block">
+                        <input type="radio" name="role_id" value="0"
+                            title="所有记录" class="layui-input" checked>
+                        <input type="radio" name="role_id" value="1"
+                        title="本年" class="layui-input">
+                        <input type="radio" name="role_id" value="2"
+                        title="本月" class="layui-input">
+                </div>
+                <select name="type" lay-filter="type">
+                    <option value="">请选择一个分类</option>
+                    <option value="">全部</option>
+                    <% select.forEach(item=>{ %>
+                        <option value="<%= item.t_id %>"><%= item.t_name %></option>
+                        <% }) %>
+                </select>
+            </div>
+        </form>
+
+        <div id="bar_diagram"></div>
+        <div id="fan_diagram"></div>
+        <form class="layui-form" action="">
+            <div class="layui-inline left">
+                <input type="text" id="year" class="layui-input"  autocomplete="off" name="years"  placeholder="请选择一个年份" onClick="WdatePicker({dateFmt:'yyyy年',onpicked:function(dp){getContent($(this).val());}})">
+            </div>
+        </form>
+        <div id="line_chart"></div>
+    </div>
+    <script language="javascript" type="text/javascript" src="/My97DatePicker/WdatePicker.js"></script>
+    <script src="../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../static/admin/js/common.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="/time/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/time/js/dateTime.min.js"></script>
+    <script src="/money/echarts/js/echarts.js"></script>
+</body>
+
+</html>

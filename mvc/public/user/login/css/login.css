@@ -1,0 +1,9 @@
+.captchaBox {
+    float: right;
+}
+
+.captcha {
+    width: 100%;
+    height: 38px;
+    margin-bottom: 6px;
+}

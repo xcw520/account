@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery输入框弹出日历时间插件DEMO演示</title>
+
+<link rel="stylesheet" href="/time/css/dateTime.css">
+
+</head>
+<body>
+
+<div class="mycontainer">
+	<input type="text" placeholder="请选择日期" id="date">
+	<input type="text" placeholder="请选择时间" id="time">
+	<input type="text" placeholder="请选择日期和时间" id="datetime">
+</div>
+
+<script type="text/javascript" src="/time/js/jquery.min.js"></script>
+<script type="text/javascript" src="/time/js/dateTime.min.js"></script>
+<script type="text/javascript">
+$("#date").datetime({
+	type:"date",
+	value:[2019,9,31],
+	success:function(res){
+		console.log(res)
+	}
+})
+
+$("#time").datetime({
+	type:"time",
+	value:[12,28]
+})
+
+$("#datetime").datetime({
+	type:"datetime",
+	value:[2019,7,15,15,30]
+})
+</script>
+
+</div>
+</body>
+</html>

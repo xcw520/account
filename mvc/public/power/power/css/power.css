@@ -1,0 +1,38 @@
+#role {
+    margin-top: 10px;
+    width: 900px;
+    height: auto;
+}
+#role a {
+    color: #fff;
+}
+#role .first {
+    margin-top: 10px;
+    width: 250px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 5px;
+    background-color:#444c63;
+    
+}
+#role .second{
+    margin-top: 10px;
+    margin-left: 55px;
+    width: 250px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 5px;
+    background-color:#359ef9;
+}
+#role .third {
+    margin-top: 10px;
+    margin-left: 112px;
+    width: 250px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 5px;
+    background-color:#33CCFF;
+}

@@ -1,0 +1,22 @@
+#picture {
+    position: relative;
+    height: 50px;
+    border: 1px solid;
+}
+
+#picture a {
+    margin-top: 6px;
+    margin-left: 5px;
+    display: block;
+    width: 35px;
+    height: 35px;
+    background: url('/img/add.png') center no-repeat;
+}
+
+#picture #avatar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 35px;
+    opacity: 0;
+}

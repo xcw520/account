@@ -1,0 +1,37 @@
+import ChartView from '../../view/Chart';
+import List, { DefaultDataVisual } from '../../data/List';
+import GlobalModel from '../../model/Global';
+import ExtensionAPI from '../../ExtensionAPI';
+import { StageHandlerProgressParams, OrdinalSortInfo, Payload } from '../../util/types';
+import BarSeriesModel from './BarSeries';
+import type Axis2D from '../../coord/cartesian/Axis2D';
+declare class BarView extends ChartView {
+    static type: "bar";
+    type: "bar";
+    private _data;
+    private _isLargeDraw;
+    private _isFirstFrame;
+    private _onRendered;
+    private _backgroundGroup;
+    private _backgroundEls;
+    private _model;
+    constructor();
+    render(seriesModel: BarSeriesModel, ecModel: GlobalModel, api: ExtensionAPI, payload: Payload): void;
+    incrementalPrepareRender(seriesModel: BarSeriesModel): void;
+    incrementalRender(params: StageHandlerProgressParams, seriesModel: BarSeriesModel): void;
+    private _updateDrawMode;
+    private _renderNormal;
+    private _renderLarge;
+    private _incrementalRenderLarge;
+    private _updateLargeClip;
+    _dataSort(data: List<BarSeriesModel, DefaultDataVisual>, idxMap: ((idx: number) => number)): OrdinalSortInfo[];
+    _isDataOrderChanged(data: List<BarSeriesModel, DefaultDataVisual>, orderMap: ((idx: number) => number), oldOrder: OrdinalSortInfo[]): boolean;
+    _updateSort(data: List<BarSeriesModel, DefaultDataVisual>, orderMap: ((idx: number) => number), baseAxis: Axis2D, api: ExtensionAPI): void;
+    _initSort(data: List<BarSeriesModel, DefaultDataVisual>, isHorizontal: boolean, baseAxis: Axis2D, api: ExtensionAPI): void;
+    remove(ecModel: GlobalModel, api: ExtensionAPI): void;
+    dispose(ecModel: GlobalModel, api: ExtensionAPI): void;
+    removeOnRenderedListener(api: ExtensionAPI): void;
+    private _clear;
+    private _removeBackground;
+}
+export default BarView;

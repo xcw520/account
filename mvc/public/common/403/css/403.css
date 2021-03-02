@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.box {
+    width: 400px;
+    height: 400px;
+    margin: 15px auto;
+    text-align: center;
+}
+.box img {
+    width: 400px;
+}
+h2,h3 {
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+}
+h3 {
+    color: #666;
+}

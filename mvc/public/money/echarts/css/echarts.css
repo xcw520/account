@@ -1,0 +1,43 @@
+.layui-btn {
+    border-radius: 15px;
+    margin-left: 5px;
+}
+
+.box {
+    width: 1110px;
+    margin: 20px auto;
+}
+
+#bar_diagram {
+    float: left;
+    width: 600px;
+    height: 400px;
+
+}
+
+#fan_diagram {
+    float: left;
+    width: 500px;
+    height: 400px;
+
+}
+
+.right {
+    float: right;
+    margin-bottom: 10px;
+}
+
+.left {
+    float: left;
+    margin-bottom: 10px;
+}
+
+.left div {
+    margin: 0 5px;
+}
+
+#line_chart {
+    float: left;
+    width: 1100px;
+    height: 400px;
+}
